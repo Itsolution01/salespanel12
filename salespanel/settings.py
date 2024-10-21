@@ -120,8 +120,13 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 import os
+
+# Directory where Django will collect static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Changed to 'staticfiles'
+
+# Directories where your static files are located during development
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,"static")
+    os.path.join(BASE_DIR, 'static'),  # Keep this as 'static'
 ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
